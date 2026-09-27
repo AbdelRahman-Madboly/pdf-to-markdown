@@ -1,0 +1,27 @@
+# Architecture
+
+PDF to Markdown Converter is intentionally small, but split into clear modules so the conversion engine can stay independent from the desktop interface.
+
+```text
+src/pdf_markdown_converter/
+  app.py        Tkinter GUI, queue, events, progress, logs
+  config.py     App constants, palettes, defaults
+  converter.py  opendataloader-pdf batch conversion wrapper
+  __main__.py   python -m entry point
+pdf_to_markdown_converter.py  Backward-compatible launcher
+assets/        App icon and future visual assets
+docs/          Build and architecture docs
+```
+
+## Design Principles
+
+- GUI code calls service modules; service modules do not import Tkinter.
+- PDF batches should be passed to `opendataloader_pdf.convert()` in one call because each call starts a JVM process.
+- The GUI reports output verification by checking for same-stem `.md` files after conversion.
+- Logs are visible and copyable for debugging.
+- The progress bar is indeterminate because the upstream API does not expose per-file progress callbacks.
+- UI design changes should be tokenized in config.py before being spread across widgets.
+
+## UI Handoff
+
+Keep converter behavior independent from the GUI so future frontends can reuse the same core logic.

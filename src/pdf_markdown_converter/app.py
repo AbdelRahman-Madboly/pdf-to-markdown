@@ -330,7 +330,6 @@ class PdfMarkdownConverterApp:
         except queue.Empty:
             pass
         self.root.after(100, self.process_log_queue)
-        self.root.after(100, self.process_ui_queue)
 
     def show_log_placeholder(self) -> None:
         self.log_text.configure(state="normal")

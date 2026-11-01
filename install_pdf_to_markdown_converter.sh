@@ -6,15 +6,14 @@ BIN_DIR="$HOME/.local/bin"
 DESKTOP_DIR="$HOME/Desktop"
 APPLICATIONS_DIR="$HOME/.local/share/applications"
 
-CURRENT_DIR="$(pwd -P)"
+CURRENT_DIR="$APP_DIR"
 SOURCE_SCRIPT="$CURRENT_DIR/pdf_to_markdown_converter.py"
 SOURCE_SRC_DIR="$CURRENT_DIR/src"
 SOURCE_DOCS_DIR="$CURRENT_DIR/docs"
 SOURCE_REQUIREMENTS="$CURRENT_DIR/requirements.txt"
 
 if [ ! -f "$SOURCE_SCRIPT" ]; then
-  echo "ERROR: pdf_to_markdown_converter.py not found in current folder."
-  echo "Run this installer from the extracted package folder."
+  echo "ERROR: pdf_to_markdown_converter.py not found next to this installer."
   exit 1
 fi
 

@@ -4,7 +4,9 @@ A small Linux desktop app that turns PDF files into Markdown. It is a Tkinter wi
 [`opendataloader-pdf`](https://pypi.org/project/opendataloader-pdf/): queue PDFs, pick an output folder,
 press Convert, and get one `.md` file per PDF, with figures saved as image files if you want them.
 
-**Status:** 1.0.0, finished and in daily use on Ubuntu. No known bugs.
+## Status
+
+1.0.0. Used daily on Ubuntu, no known bugs. The tests run in CI on every push.
 
 ## What it does
 
@@ -51,12 +53,13 @@ python3 -m src.pdf_markdown_converter
 ## Develop
 
 ```bash
-pip install pytest
+pip install -r requirements.txt pytest
 python3 -m pytest -q
 ```
 
 The tests build a one-page PDF by hand and convert it for real; that test is skipped when Java is not
-installed. The window tests build the real window hidden and are skipped when there is no display.
+installed. The window tests build the real window hidden and are skipped when there is no display
+(CI runs them under `xvfb-run`).
 
 | File | Purpose |
 |---|---|

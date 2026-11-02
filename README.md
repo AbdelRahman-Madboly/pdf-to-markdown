@@ -1,5 +1,7 @@
 # PDF to Markdown Converter
 
+<img src="docs/readme-icon.png" width="96" align="right" alt="PDF to Markdown Converter icon">
+
 A small Linux desktop app that turns PDF files into Markdown. It is a Tkinter window around
 [`opendataloader-pdf`](https://pypi.org/project/opendataloader-pdf/): queue PDFs, pick an output folder,
 press Convert, and get one `.md` file per PDF, with figures saved as image files if you want them.
@@ -71,3 +73,7 @@ installed. The window tests build the real window hidden and are skipped when th
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+## Author
+
+Designed and built by Abdel Rahman Mohamad EL-Sayed ([AbdelRahman-Madboly](https://github.com/AbdelRahman-Madboly) on GitHub).

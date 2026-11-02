@@ -16,6 +16,8 @@
 
 [How it works](#how-it-works) · [Install](#install) · [Run](#run) · [What it does not do](#what-it-does-not-do) · [Develop](#develop)
 
+<img src="docs/screenshots/01-queue.png" width="760" alt="pdf-to-markdown: The converter window">
+
 </div>
 
 ## Why PDF to Markdown Converter
@@ -56,6 +58,14 @@ Output for `paper.pdf`:
 ```text
 paper.md             plus a folder of extracted images when Extract images is on and the PDF has figures
 ```
+
+## Screenshots
+
+| A PDF page and the Markdown it produced |
+|---|
+| ![A PDF page and the Markdown it produced](docs/screenshots/02-pdf-vs-markdown.png) |
+
+<sub>A made-up sample paper.</sub>
 
 ## Status
 

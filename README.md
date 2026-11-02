@@ -39,6 +39,10 @@ did not produce a Markdown file.
   not produce one are listed.
 - **A log you keep.** Copy the log or save it into the output folder.
 
+<img src="docs/concept-in-use.jpg" width="640" alt="pdf-to-markdown in use">
+
+<sub>Concept image of the app on a laptop. The screen shows a real screenshot from demo data.</sub>
+
 ## How it works
 
 ```mermaid
